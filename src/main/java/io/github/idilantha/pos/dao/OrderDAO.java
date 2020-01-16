@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface OrderDAO extends JpaRepository<Order, Integer> {
 
-    @Query(value = "SELECT IFNULL(SELECT id FROM `Order` ORDER BY id DESC LIMIT 1),0)AS id",nativeQuery = true)
+    @Query(value = "SELECT IFNULL((SELECT id FROM `Order` ORDER BY id DESC LIMIT 1),0)AS id",nativeQuery = true)
     int getLastOrderId();
 
     @Query(value = "SELECT EXIST(SELECT * FROM Customer WHERE customerId=?1)",nativeQuery = true)
