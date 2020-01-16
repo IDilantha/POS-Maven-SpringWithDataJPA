@@ -1,6 +1,6 @@
 
 
-# Point of Sale System with Maven and HibernateJPA + Spring
+# Point of Sale System with Maven + Spring + DataJPA
 
 Getting Started
 
@@ -11,11 +11,11 @@ Built With
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section.
 
 Maven
-HibernateJPA
+JPA
 Spring
+DataJPA
 
-Requirement
-
+Requirements
 java 1.8 or higher version jfoenix jasperreports
 
 Author -
