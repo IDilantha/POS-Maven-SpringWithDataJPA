@@ -1,7 +1,6 @@
-package io.github.idilantha.pos.dao.custom;
+package io.github.idilantha.pos.dao;
 
 
-import io.github.idilantha.pos.dao.CrudDAO;
 import io.github.idilantha.pos.entity.Order;
 
 public interface OrderDAO extends CrudDAO<Order, Integer> {

@@ -1,5 +1,6 @@
 package io.github.idilantha.pos;
 
+import io.github.idilantha.pos.dao.CustomerDAO;
 import lk.ijse.dep.crypto.DEPCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -16,14 +17,13 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories
+@EnableJpaRepositories(basePackageClasses = {CustomerDAO.class})
 @PropertySource("file:${user.dir}/src/main/resources/application.properties")
 public class JPAConfig {
 

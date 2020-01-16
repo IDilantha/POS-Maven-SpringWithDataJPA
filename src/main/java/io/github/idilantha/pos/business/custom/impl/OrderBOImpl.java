@@ -2,7 +2,7 @@ package io.github.idilantha.pos.business.custom.impl;
 
 
 import io.github.idilantha.pos.business.custom.OrderBO;
-import io.github.idilantha.pos.dao.custom.*;
+import io.github.idilantha.pos.dao.*;
 import io.github.idilantha.pos.dto.OrderDTO;
 import io.github.idilantha.pos.dto.OrderDTO2;
 import io.github.idilantha.pos.dto.OrderDetailDTO;

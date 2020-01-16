@@ -2,8 +2,8 @@ package io.github.idilantha.pos.business.custom.impl;
 
 
 import io.github.idilantha.pos.business.custom.ItemBO;
-import io.github.idilantha.pos.dao.custom.ItemDAO;
-import io.github.idilantha.pos.dao.custom.OrderDetailDAO;
+import io.github.idilantha.pos.dao.ItemDAO;
+import io.github.idilantha.pos.dao.OrderDetailDAO;
 import io.github.idilantha.pos.dto.ItemDTO;
 import io.github.idilantha.pos.entity.Item;
 import javafx.scene.control.Alert;

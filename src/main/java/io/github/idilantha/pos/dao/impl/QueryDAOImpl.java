@@ -1,13 +1,12 @@
-package io.github.idilantha.pos.dao.custom.impl;
+package io.github.idilantha.pos.dao.impl;
 
 
 
-import io.github.idilantha.pos.dao.custom.QueryDAO;
+import io.github.idilantha.pos.dao.QueryDAO;
 import io.github.idilantha.pos.entity.CustomEntity;
 import org.hibernate.query.NativeQuery;
 import org.hibernate.query.Query;
 import org.hibernate.transform.Transformers;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;

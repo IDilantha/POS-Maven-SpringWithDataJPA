@@ -1,12 +1,11 @@
-package io.github.idilantha.pos.dao.custom;
+package io.github.idilantha.pos.dao;
 
 
-import io.github.idilantha.pos.dao.SuperDAO;
 import io.github.idilantha.pos.entity.CustomEntity;
 
 import java.util.List;
 
-public interface QueryDAO extends SuperDAO {
+public interface QueryDAO {
 
 
 
