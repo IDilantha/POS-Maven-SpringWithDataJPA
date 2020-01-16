@@ -29,7 +29,7 @@ public class ItemBOImpl implements ItemBO {
 
     @Override
     public void updateItem(ItemDTO item) throws Exception {
-        itemDAO.update(new Item(item.getCode(),item.getDescription(), item.getUnitPrice(), item.getQtyOnHand()));
+        itemDAO.save(new Item(item.getCode(),item.getDescription(), item.getUnitPrice(), item.getQtyOnHand()));
     }
 
     @Override
@@ -38,7 +38,7 @@ public class ItemBOImpl implements ItemBO {
             new Alert(Alert.AlertType.ERROR, "Item Already exist in an order , Unable to Delete").show();
             return;
         }else {
-            itemDAO.delete(itemCode);
+            itemDAO.deleteById(itemCode);
         }
     }
 
@@ -63,7 +63,7 @@ public class ItemBOImpl implements ItemBO {
 
     @Override
     public ItemDTO findItem(String itemCode) throws Exception {
-        Item item = itemDAO.find(itemCode);
+        Item item = itemDAO.findById(itemCode).get();
         return new ItemDTO(item.getCode(), item.getDescription(), item.getQtyOnHand(), item.getUnitPrice());
     }
 

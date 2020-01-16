@@ -29,7 +29,7 @@ public class CustomerBOImpl implements CustomerBO {
 
     @Override
     public void updateCustomer(CustomerDTO customer) throws Exception {
-        customerDAO.update(new Customer(customer.getId(), customer.getName(), customer.getAddress()));
+        customerDAO.save(new Customer(customer.getId(), customer.getName(), customer.getAddress()));
     }
 
     @Override
@@ -38,7 +38,7 @@ public class CustomerBOImpl implements CustomerBO {
             new Alert(Alert.AlertType.ERROR, "Customer Already exist in an order , Unable to Delete").show();
             return;
         }else {
-            customerDAO.delete(customerId);
+            customerDAO.deleteById(customerId);
         }
     }
 
@@ -60,7 +60,7 @@ public class CustomerBOImpl implements CustomerBO {
 
     @Override
     public CustomerDTO findCustomer(String customerId) throws Exception {
-        Customer customer = customerDAO.find(customerId);
+        Customer customer = customerDAO.findById(customerId).get();
         return new CustomerDTO(customer.getCustomerId(), customer.getName(), customer.getAddress());
     }
 
